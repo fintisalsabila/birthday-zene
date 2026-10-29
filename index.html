@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Zidane 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/rider.ico" />
+</head>
+<body>
+
+  <!-- ========== SCREEN 1: HENSHIN ========== -->
+  <section id="henshinScreen" class="screen active">
+    <div class="henshin-greeting">
+      <p class="greeting-small">TARGET LOCKED</p>
+      <p class="greeting-name">Muhammad Zidane Ramadhan</p>
+    </div>
+
+    <div class="belt">
+      <div class="belt-core"></div>
+      <button id="henshinBtn" class="henshin-btn" aria-label="Henshin">
+        <span class="henshin-text">HENSHIN!</span>
+      </button>
+    </div>
+    <p class="hint">Tekan tombol untuk memulai ⚡</p>
+  </section>
+
+  <!-- ========== SCREEN 2: RIDER KICK COMBO ========== -->
+  <section id="comboScreen" class="screen">
+    <div class="rooftop">
+      <div class="moon"></div>
+      <div class="city"></div>
+
+      <div class="hero" id="hero">
+        <img src="images/heroo.png" alt="Hero" onerror="this.style.display='none'" />
+        
+      </div>
+
+      <div class="combo-ui">
+        <h2 class="combo-title">RIDER COMBO!</h2>
+        <p class="combo-sub">Zidane, lakukan 3 serangan sebelum waktu habis!</p>
+
+        <div class="timer-bar">
+          <div class="timer-fill" id="timerFill"></div>
+        </div>
+        <div class="timer-text" id="timerText">⏱️ 10.0s</div>
+
+        <div class="attack-buttons" id="attackButtons">
+          <button class="attack-btn" data-attack="kick" disabled>🦵 Rider Kick!</button>
+          <button class="attack-btn" data-attack="punch" disabled>👊 Rider Punch!</button>
+          <button class="attack-btn" data-attack="final" disabled>💥 Final Attack Ride!</button>
+        </div>
+
+        <div class="combo-status" id="comboStatus"></div>
+      </div>
+
+      <div class="impact-layer" id="impactLayer"></div>
+    </div>
+  </section>
+
+  <!-- ========== SCREEN 3: RIDER CARD ========== -->
+  <section id="cardScreen" class="screen">
+    <div class="card-scene">
+      <!-- Card is now just the floating image (manual card markup removed) -->
+      <div class="rider-card" id="riderCard">
+        <img src="images/photocard.jpg" alt="Muhammad Zidane Ramadhan Rider Card"
+             onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22420%22><rect width=%22300%22 height=%22420%22 fill=%22%23111%22/><text x=%22150%22 y=%22210%22 font-size=%2240%22 fill=%22%23ff2d2d%22 text-anchor=%22middle%22>🎴</text></svg>'" />
+      </div>
+      <p class="card-hint">Klik kartu untuk membuka ucapan 🎴</p>
+    </div>
+  </section>
+
+  <!-- ========== SCREEN 4: CELEBRATION ========== -->
+  <section id="celebrationScreen" class="screen">
+    <div class="stars" id="stars"></div>
+
+    <header class="celebration-hero">
+      <p class="bday-target">FOR</p>
+      <h1 class="bday-name">Muhammad Zidane Ramadhan</h1>
+      <h2 class="bday-title">HAPPY BIRTHDAY!</h2>
+      <p class="bday-sub">🎉 Selamat Ulang Tahun<span id="ageNum"></span> 🎉</p>
+      <p class="bday-date">🎂 31 Oktober 2003 → 31 Oktober <span id="currentYear">2026</span></p>
+      <p class="perfect-badge" id="perfectBadge"></p>
+    </header>
+
+<!-- Music player -->
+<div class="music-section">
+  <div class="music-player">
+    <div class="music-info">
+      <span class="music-icon">🎵</span>
+      <span class="music-label">Happy Birthday Song</span>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/wJ9isuDjuPg?start=3&rel=0"
+        title="Happy Birthday Song"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+
+    <a class="video-fallback"
+       href="https://www.youtube.com/watch?v=wJ9isuDjuPg&t=3s"
+       target="_blank" rel="noopener">▶ Buka di YouTube</a>
+  </div>
+</div>
+
+    <!-- Message -->
+    <section class="message-section">
+      <h2>💌 Pesan Spesial untuk Zidane 💌</h2>
+      <p>
+        Selamat ulang tahun, <strong>Muhammad Zidane Ramadhan</strong>! 🎂<br />
+        Kamu adalah pahlawanku di dunia nyata. Lebih hebat dari Kamen Rider
+        dan Ultraman sekalipun. Setiap hari bersamamu terasa seperti
+        petualangan baru yang seru.
+      </p>
+      <p>
+        Selamat datang di usia ke-<strong><span id="ageNum2">22</span></strong>.
+        Semoga tahun ini penuh kesehatan, kebahagiaan, rezeki yang melimpah,
+        dan semua mimpi yang kamu raih bisa terwujud satu per satu.
+        Tetap jadi pahlawan yang baik hati ya! 💪
+      </p>
+      <p class="halloween-note">
+        🎃 Fun fact: Kamu lahir di hari Halloween! Cocok banget sama
+        vibe pahlawan misterius, keren dan penuh kejutan.
+      </p>
+      <p class="signature">— Dengan cinta, Fin ❤️</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <h2>📸 Galeri</h2>
+      <div class="gallery">
+        <div class="gallery-item" data-src="images/photo1.jpg">
+          <img src="images/photo1.jpg" alt="Kenangan 1"
+               onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><rect width=%22300%22 height=%22300%22 fill=%22%23111%22/><text x=%22150%22 y=%22160%22 font-size=%2230%22 fill=%22%23ff2d2d%22 text-anchor=%22middle%22>📷 Foto 1</text></svg>'" />
+        </div>
+        <div class="gallery-item" data-src="images/photo2.jpg">
+          <img src="images/photo2.jpg" alt="Kenangan 2"
+               onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><rect width=%22300%22 height=%22300%22 fill=%22%23111%22/><text x=%22150%22 y=%22160%22 font-size=%2230%22 fill=%22%23ff2d2d%22 text-anchor=%22middle%22>📷 Foto 2</text></svg>'" />
+        </div>
+        <div class="gallery-item" data-src="images/photo3.jpg">
+          <img src="images/photo3.jpg" alt="Kenangan 3"
+               onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><rect width=%22300%22 height=%22300%22 fill=%22%23111%22/><text x=%22150%22 y=%22160%22 font-size=%2230%22 fill=%22%23ff2d2d%22 text-anchor=%22middle%22>📷 Foto 3</text></svg>'" />
+        </div>
+      </div>
+    </section>
+
+    <button class="celebrate-btn" id="replayBtn">🎊 Rayakan Lagi! 🎊</button>
+
+    <footer>
+      Made with <span class="heart">❤️</span> for Muhammad Zidane Ramadhan
+    </footer>
+  </section>
+
+  <!-- ========== LIGHTBOX (for gallery) ========== -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Preview" id="lightboxImg" />
+  </div>
+
+  <!-- ========== AUDIO ========== -->
+  <audio id="sfxHenshin" preload="auto"><source src="audio/henshin.mp3" type="audio/mpeg" /></audio>
+  <audio id="sfxKick" preload="auto"><source src="audio/kick.mp3" type="audio/mpeg" /></audio>
+  <audio id="sfxPunch" preload="auto"><source src="audio/punch.mp3" type="audio/mpeg" /></audio>
+  <audio id="sfxFinal" preload="auto"><source src="audio/final.mp3" type="audio/mpeg" /></audio>
+  <audio id="sfxExplosion" preload="auto"><source src="audio/explosion.mp3" type="audio/mpeg" /></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
